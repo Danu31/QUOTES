@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="background" id="background">
+
+
+    <div class="quotePopUp" id="quotePopUp">
+        <div class="popUpText" id="popUpText">
+            <p class="popUpQuote" id="popUpQuote">
+                Walking on water and developing software from a specification are easy if both are frozen.
+            </p>
+            <p class="popUpAuthor" id="popUpAuthor">
+                BY EDAWRD V. BERARD
+            </p>
+        </div>
+
+        <img src="resources/X.png" alt="X" class="popUpX" id="popUpX" onclick="hidePopUp()" />
+         <button id="buttons" onclick="BUTTON()" class="addToFavorite" id="addToFavorite" onclick="addToFavorite()">ADD TO FAVORITE</button> 
+    </div>
+
+    <div class="topSideOverlayWithBackground" id="topSideOverlayWithBackground">
+        <div class="overlayTop" id="overlayTop" onclick="hideResults()"></div>
+        <div class="topSideOverlay">
+            <div class="TitleOverlay">
+                <p>PROGRAMMING QUOTES</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overlay" id="overlay" onclick="hideResults()"></div>
+    <div class="quoteOverlay" id="quoteOverlay" onclick="hidePopUp()"></div>
+
+    <div class="Title" onclick="randomQuote()">
+        <p>PROGRAMMING QUOTES</p>
+    </div>
+    <div class="main">
+
+
+        <form autocomplete="off" class="searchBar" id="searchBar">
+
+            <div class="inputWidth" id="inputWidth">
+                <input id="search" type="text" value="" placeholder="SEARCH" class="input" onKeyUp="showResults()" />
+                <img src="resources/lupa.png" alt="Lupa" class="Lupa" id="Lupa" onclick="extendSearchBar()" />
+                <img src="resources/X.png" alt="X" class="X" id="X" onclick="hideResults()" />
+
+                <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946689/IFrameApplication/moon_gy2meg.svg" alt="Moon" class="Moon" id="Moon" onclick="changeAppearance()" />
+
+
+                <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946691/IFrameApplication/heart_rupwyu.svg" alt="heart" class="heart" id="heart" onclick="showFavorites()" />
+
+                <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659947124/IFrameApplication/arrowLeft_bcmlcc.svg" alt="back" class="goBack" id="goBack" onclick="goBackIsNotAFunction()" />
+
+                <div class="resultBackground" id="resultBackground">
+
+                    <div id="result" class="result">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </form>
+
+        <div class="searchResults" id="searchResults">
+            <!-- <h1 class = "searchResultsTitle" id = "searchResultsTitle">SEARCH RESULTS</h1>
+            <h1 class = "favoriteQuotesTitle" id = "favoriteQuotesTitle">FAVORITE QUOTES</h1> -->
+            <h1 id="quotesListTitle"></h1>
+            <div class="quoteSearchResults" id="quoteSearchResults">
+
+            </div>
+        </div>
+
+        <div class="quoteOfTheDay" id="quoteOfTheDay">
+            <div class="text">
+                <p class="qotd">QUOTE OF THE DAY</p>
+            </div>
+            <div class="theQuote" id="theQuote">
+                <div class="quotes">
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg " alt="Open Quote" class="openQuote" />
+                    <img src="resources/close.png" alt="Close Quote" class="closeQuote" />
+                </div>
+                
+                <div class="LINII2" onclick="openModal()">
+                    
+                </div>
+                    
+
+                <p class="quote" id="quote" onclick="openModal()">Walking on water and developing software from a specification are easy if both are frozen.</p>
+                <p class="author" id="author"> BY EDAWRD V. BERARD</p>
+                <img src="resources/Reroll.png" alt="reroll" class="reroll" onclick=" reroll()" id="reroll" />
+            </div>
+
+        </div>
+        <div class="listOfQuotes" id="listOfQuotes">
+            <p class="listOfQuotesTitle">LIST OF QUOTES</p>
+            <div class="QuotesList">
+                <div class="quoteInTheList" id="quoteInTheList">
+                    <div class="LINII" id="LINII">
+                        
+                    </div>
+
+                    <p class="quoteInTheListText">The computer was born to solve problems that did not exist before.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII"> 
+                    </div>
+
+                    <p class="quoteInTheListText">Before software should be reusable, it should be usable.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII">
+                      
+                    </div>
+
+                    <p class="quoteInTheListText">Simplicity, carried to the extreme, becomes elegance.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+
+                    <div class="LINII" id="LINII">
+                        
+                    </div>
+
+                    <p class="quoteInTheListText">A program is never less than 90% complete, and never more than 95% complete.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII">
+                         
+                    </div>
+                    
+                    <p class="quoteInTheListText">A good programmer is someone who always looks both ways before crossing a one-way street.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII"> 
+                    </div>
+                    
+                    <p class="quoteInTheListText">Design is where science and art break even.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII">
+                        
+                    </div>
+                    
+                    <p class="quoteInTheListText">Computers are good at following instructions, but not at reading your mind.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII"> 
+                    </div>
+                    
+                    <p class="quoteInTheListText">Standards are always out of date.  That’s what makes them standards.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII">
+                    </div>
+                    
+                    <p class="quoteInTheListText">It’s hardware that makes a machine fast.  It’s software that makes a fast machine slow.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII">
+                         
+                    </div>
+                    
+                    <p class="quoteInTheListText">Physics is the universe’s operating system.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+                <div class="quoteInTheList">
+                    <div class="LINII" id="LINII">
+                      
+                    </div>
+                    
+                    <p class="quoteInTheListText" onclick="">The computer was born to solve problems that did not exist before.</p>
+                    <img src="https://res.cloudinary.com/multimediarog/image/upload/v1659946687/IFrameApplication/open_voywbb.svg" alt="closeQuote" class="closedQuote">
+                    <img src="resources/ArrowRight.png" alt="ArrowRight" class="ArrowRight">
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="favorites">
+
+        </div>
+
+
+</body>
+
+</html>
